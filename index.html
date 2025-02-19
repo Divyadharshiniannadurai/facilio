@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilio - Pricing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #6a11cb;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .demo-button {
+            width: 80px;
+            padding: 5px 10px;
+            font-size: 12px;
+            background: #6a11cb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin-top: 50px; 
+        }
+
+        .pricing-box {
+            display: flex;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 900px;
+            padding-bottom: 20px;
+        }
+
+        .left-section {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .left-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .left-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .right-section {
+            flex: 1;
+            background: white;
+            color: black;
+            padding: 40px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            background: #6a11cb;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .company-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 30px; 
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+
+        .company-logos img {
+            width: 100px; 
+            max-width: 120px;
+            height: auto;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .company-logos img:hover {
+            transform: scale(1.1); 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Facilio</div>
+        <nav>
+            <a href="#">Platform</a> 
+            <a href="#">Resource</a> 
+            <a href="#">Solution</a>
+            <a href="#">Pricing</a>
+            <a href="#">Company</a>
+        </nav>
+        <button class="demo-button">Book a Demo</button>
+    </header>
+
+    <div class="container">
+        <div class="pricing-box">
+            <div class="left-section">
+                <h2>Flexible pricing structure that fuels your operations to scale</h2>
+                <p>To provide you with accurate pricing information, we need a few details. Share your details on the form, and we will schedule a meeting based on your comfort.</p>
+                <div class="stats">40% Reduction in asset downtime | 30% Reduction in reactive call volumes</div>
+            </div>
+
+            <div class="right-section">
+                <h3>Get your pricing quote</h3>
+                <div class="form-group"><input type="text" placeholder="First Name"></div>
+                <div class="form-group"><input type="text" placeholder="Last Name"></div>
+                <div class="form-group"><input type="email" placeholder="Email"></div>
+                <div class="form-group"><input type="text" placeholder="Phone"></div>
+                <div class="form-group"><input type="text" placeholder="Company"></div>
+                <button>Request Pricing</button>
+            </div>
+        </div>
+
+        <div class="company-logos">
+            <img src="assests/brookfield.png" alt="Brookfield">
+            <img src="assests/brtish land.png" alt="British Land">
+            <img src="assests/download.jpg" alt="DHL">
+            <img src="assests/seimens.png" alt="Siemens">
+        </div>
+    </div>
+
+</body>
+</html>
