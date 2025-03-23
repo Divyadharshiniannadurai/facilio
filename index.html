@@ -142,6 +142,83 @@
         .company-logos img:hover {
             transform: scale(1.1); 
         }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .pricing, .testimonials {
+            margin: 40px auto;
+            max-width: 800px;
+        }
+        
+        .faq details {
+            background: #f4f4f4;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .testimonials {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px; /* Adjust as needed */
+        }
+        
+        h2 {
+            text-align: left;
+            margin: 0;
+            flex: 1;
+        }
+        
+        .carousel {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .testimonial {
+            text-align: center;
+            max-width: 250px; /* Adjust width as needed */
+        }
+        
+        button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .testimonial img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .left-info {
+            width: 40%;
+        }
+
+        .left-info h2 {
+            font-size: 28px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -184,6 +261,46 @@
             <img src="assests/seimens.png" alt="Siemens">
         </div>
     </div>
+    <section class="pricing">
+        <div class="left-section"></div>
+        <h2>How does Facilio’s pricing work?</h2>
+        <div class="faq">
+            <div class="right-section"></div>
+            <details>
+                <summary>How do you calculate the price?</summary>
+                <p>Pricing depends on several factors, including the number of users/buildings, portfolio size, training sessions, and integration requirements.</p>
+            </details>
+            <details>
+                <summary>Does the cost change significantly over time?</summary>
+            </details>
+            <details>
+                <summary>Are there heavy integration or IT costs on top of the subscription?</summary>
+            </details>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="container">
+            <h2>Know what our customers have to say about Facilio</h2>
+            <div class="carousel">
+                <button class="prev">&lt;</button>
+                <div class="testimonial">
+                    <a href="https://fast.wistia.net/embed/iframe/dd24krvwkx" target="_blank">Watch Video</a>
+                    <p>UK FMLeader Boosts Service Quality with Facilio</p>
+                </div>
+                <div class="testimonial">
+                    <a href="https://fast.wistia.net/embed/iframe/ae35nv574t" target="_blank">Watch Video</a>
+                    <p>CIT Ltd Ensures Compliance-Ready Status in Only 2 Weeks with Facilio</p>
+                </div>
+                <div class="testimonial">
+                    <a href="https://fast.wistia.net/embed/iframe/rik3z3yyzr" target="_blank">Watch Video</a>
+                    <p>ICD Brookfield place future proofs their facility with Facilio</p>
+                </div>
+                <button class="next">&gt;</button>
+            </div>
+        </div>
+    </section>
+    
 
+    <script src="script.js"></script>
 </body>
 </html>
