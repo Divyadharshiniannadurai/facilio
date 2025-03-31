@@ -142,82 +142,220 @@
         .company-logos img:hover {
             transform: scale(1.1); 
         }
-        body {
-            font-family: Arial, sans-serif;
+
+        .pricing-faq {
+            display: flex;
+            width: 80%;
+            max-width: 900px;
+            margin: 50px auto;
+            gap: 40px;
+        }
+
+        .pricing-faq h2 {
+            flex: 1;
+            font-size: 28px;
             margin: 0;
-            padding: 20px;
-            text-align: center;
         }
-        
-        .pricing, .testimonials {
-            margin: 40px auto;
-            max-width: 800px;
+
+        .faq {
+            flex: 1;
         }
-        
+
         .faq details {
             background: #f4f4f4;
             margin: 10px 0;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
             cursor: pointer;
-        }
-        .testimonials {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 1200px; /* Adjust as needed */
-        }
-        
-        h2 {
-            text-align: left;
-            margin: 0;
-            flex: 1;
-        }
-        
-        .carousel {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .testimonial {
-            text-align: center;
-            max-width: 250px; /* Adjust width as needed */
-        }
-        
-        button {
-            background: none;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        
-        .testimonial img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        
-        button {
-            background: none;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        .left-info {
-            width: 40%;
+            position: relative;
         }
 
-        .left-info h2 {
+        .faq summary {
+            font-weight: bold;
+            list-style: none;
+            padding-right: 30px;
+        }
+
+        .faq summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq summary:after {
+            content: ">";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            transform: rotate(90deg);
+            transition: transform 0.2s;
+        }
+
+        .faq details[open] summary:after {
+            transform: rotate(270deg);
+        }
+
+        .faq p {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            width: 80%;
+            max-width: 1200px;
+            margin: 80px auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .testimonials-heading {
+            flex: 1;
+        }
+
+        .testimonials h2 {
             font-size: 28px;
             color: #333;
+            margin: 0;
+            text-align: left;
+        }
+
+        .testimonial-cards {
+            flex: 2;
+            display: flex;
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            flex: 1;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .testimonial-card h3 {
+            color: #6a11cb;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .testimonial-card p {
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Footer Styles */
+        .footer-container {
+            background-color: #f8f8f8;
+            width: 100%;
+            padding: 60px 0 30px;
+            margin-top: 80px;
+            border-top: 1px solid #eaeaea;
+        }
+
+        .footer-content {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .footer-column h4 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-column a:hover {
+            color: #6a11cb;
+        }
+
+        .footer-bottom {
+            width: 80%;
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 30px;
+            border-top: 1px solid #eaeaea;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #6a11cb;
+            margin-bottom: 15px;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-legal a {
+            text-decoration: none;
+            color: #666;
+            font-size: 12px;
+        }
+
+        .copyright {
+            color: #999;
+            font-size: 12px;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        @media (max-width: 900px) {
+            .testimonials {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .testimonial-cards {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .footer-column {
+                min-width: 120px;
+                flex: 0 0 40%;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
         }
     </style>
 </head>
@@ -242,7 +380,6 @@
                 <p>To provide you with accurate pricing information, we need a few details. Share your details on the form, and we will schedule a meeting based on your comfort.</p>
                 <div class="stats">40% Reduction in asset downtime | 30% Reduction in reactive call volumes</div>
             </div>
-
             <div class="right-section">
                 <h3>Get your pricing quote</h3>
                 <div class="form-group"><input type="text" placeholder="First Name"></div>
@@ -253,53 +390,110 @@
                 <button>Request Pricing</button>
             </div>
         </div>
-
-        <div class="company-logos">
-            <img src="assests/brookfield.png" alt="Brookfield">
-            <img src="assests/brtish land.png" alt="British Land">
-            <img src="assests/download.jpg" alt="DHL">
-            <img src="assests/seimens.png" alt="Siemens">
-        </div>
     </div>
-    <section class="pricing">
-        <div class="left-section"></div>
-        <h2>How does Facilio’s pricing work?</h2>
+
+    <section class="pricing-faq">
+        <h2>How does Facilio's pricing work?</h2>
         <div class="faq">
-            <div class="right-section"></div>
             <details>
                 <summary>How do you calculate the price?</summary>
                 <p>Pricing depends on several factors, including the number of users/buildings, portfolio size, training sessions, and integration requirements.</p>
             </details>
             <details>
                 <summary>Does the cost change significantly over time?</summary>
+                <p>No, Facilio offers 100% transparent year-on-year pricing plans with no hidden costs. We keep our pricing plans flexible to suit your growth. Most users see a return on investment (ROI) in 3-5 months.</p>
             </details>
             <details>
                 <summary>Are there heavy integration or IT costs on top of the subscription?</summary>
+                <p>No, Facilio offers 60+ ready-to-deploy integrations and provides in-house development and support for any new integration needed at a fraction of general market rates</p>
             </details>
         </div>
     </section>
+
     <section class="testimonials">
-        <div class="container">
+        <div class="testimonials-heading">
             <h2>Know what our customers have to say about Facilio</h2>
-            <div class="carousel">
-                <button class="prev">&lt;</button>
-                <div class="testimonial">
-                    <a href="https://fast.wistia.net/embed/iframe/dd24krvwkx" target="_blank">Watch Video</a>
-                    <p>UK FMLeader Boosts Service Quality with Facilio</p>
-                </div>
-                <div class="testimonial">
-                    <a href="https://fast.wistia.net/embed/iframe/ae35nv574t" target="_blank">Watch Video</a>
-                    <p>CIT Ltd Ensures Compliance-Ready Status in Only 2 Weeks with Facilio</p>
-                </div>
-                <div class="testimonial">
-                    <a href="https://fast.wistia.net/embed/iframe/rik3z3yyzr" target="_blank">Watch Video</a>
-                    <p>ICD Brookfield place future proofs their facility with Facilio</p>
-                </div>
-                <button class="next">&gt;</button>
+        </div>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <h3>Q3</h3>
+                <p>UK FM Leader Boosts Service Quality with Facilio</p>
+            </div>
+            <div class="testimonial-card">
+                <h3>cit</h3>
+                <p>CIT Ltd Ensures Compliance–Ready Status in Only 2 Weeks with Facilio</p>
+            </div>
+            <div class="testimonial-card">
+                <h3>Brookfield</h3>
+                <p>ICD Brookfield place improves their facility with Facilio</p>
             </div>
         </div>
     </section>
-    
+
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="#">Connected CMMS</a></li>
+                    <li><a href="#">Connected Buildings</a></li>
+                    <li><a href="#">Connected Refrigeration</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="#">Portfolio wide operations</a></li>
+                    <li><a href="#">FM visibility</a></li>
+                    <li><a href="#">360 Asset lifecycle</a></li>
+                    <li><a href="#">Continuous sustainability</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Industry</h4>
+                <ul>
+                    <li><a href="#">Commercial Real Estate</a></li>
+                    <li><a href="#">Corporate Facilities</a></li>
+                    <li><a href="#">FM Services</a></li>
+                    <li><a href="#">Healthcare</a></li>
+                    <li><a href="#">Retail</a></li>
+                    <li><a href="#">Education</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Ebooks & Guides</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Webinars</a></li>
+                    <li><a href="#">Product Updates</a></li>
+                    <li><a href="#">Help Docs</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Newsroom</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Careers [We are hiring]</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo">facilio</div>
+            <div class="footer-legal">
+                <a href="#">Terms of service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">GDPR</a>
+                <a href="#">Security</a>
+            </div>
+            <div class="copyright">© 2024 Facilio.Inc | All rights reserved</div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
